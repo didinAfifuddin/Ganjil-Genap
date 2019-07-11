@@ -1,0 +1,2 @@
+# Ganjil-Genap
+Latihan saja
