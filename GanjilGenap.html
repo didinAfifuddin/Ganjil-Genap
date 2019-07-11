@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+        text-align: center;
+        }
+
+        label, input, button {
+        margin-bottom: 10px;
+        }
+
+        input {
+        border: none;
+        border-bottom: 1px solid green;
+        outline: none;
+        padding-bottom: 5px;
+        }
+
+        .input-nilai{
+            margin-top: 150px;
+        }
+
+        input:focus{
+        padding-bottom: 10px;
+        }
+
+        button {
+        width: 100px;
+        outline: none;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        }
+
+        button:hover{
+        color: green;
+        border: 1px solid green;
+        background-color: white;
+        }
+
+        div{
+        width: 200px;
+        display: inline-block;
+        background-color: green;
+        position: absolute;
+        margin: 70px -150px 0px;
+        border-radius: 10px;
+        color: white;
+        }
+    </style>
+</head>
+<body>
+    <p class="input-nilai"><b>Ganjil <span style="color: green;">Genap<span><b></p><br><br>
+    <input type="text" id="bil1" placeholder="masukan bilangan"><br>
+    <button type ="button" id="btn" Onclick="GanjilGenap()">Ok</button>
+    <div class="hasil">
+    <p id="output">output</p>
+    </div>
+</body>
+    <script>
+        function GanjilGenap() {
+            var bilBulat = document.getElementById('bil1').value;
+            var jumlah;
+            
+            jumlah = bilBulat % 2;
+            
+            if(jumlah == 0){
+            jumlah = "Bilangan Genap"
+            }else{
+            jumlah = "Bilangan Ganjil"
+            }
+            
+            document.getElementById('output').innerHTML = bilBulat + " merupakan bilangan "+jumlah;
+            // document.write(bilBulat + " merupakan bilangan "+jumlah);
+        }
+    </script>
+</html>
